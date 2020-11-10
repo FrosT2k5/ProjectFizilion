@@ -2,7 +2,7 @@ import asyncio
 from userbot.events import register
 from userbot import CMD_HELP
 
-@register(outgoing=True, pattern="^.hack(.*)")
+@register(outgoing=True, pattern="^.hack$")
 async def hack_func(message):
     user = await message.client.get_user_dict(message.from_user.id)
     heckerman = user['mention']
@@ -45,7 +45,7 @@ async def hack_func(message):
     for i in range(max_ani):
         await asyncio.sleep(3)
         await message.edit(animation_chars[i % max_ani])
-    await message.edit(hecked)
+        await message.edit(hecked)
     
 CMD_HELP.update({
     "hack":
