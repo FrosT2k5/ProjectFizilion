@@ -5,7 +5,9 @@ from userbot import CMD_HELP
 @register(outgoing=True, pattern="^.hack$")
 async def _(event):
     if event.fwd_from:
+
     return
+
     animation_interval = 3
     animation_ttl = range(0, 12)
     input_str = event.pattern_match.group(1)
