@@ -28,5 +28,5 @@ async def selfdestruct(destroy):
         
 CMD_HELP.update(
     {
-        "selfdestruct": ".sd <time in seconds> <text>
+        "selfdestruct": ".sd <time in seconds> <text>"
     })
