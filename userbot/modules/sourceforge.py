@@ -38,7 +38,8 @@ async def _(event):
               expect \"Uploading\"\
               expect \"100%\"\
               expect \"sftp>\"\
-              \ninteract""}
+              interact"
+"}
     try:
         selected_one = CMD_WEB[selected_transfer].format(file_name)
     except KeyError:
