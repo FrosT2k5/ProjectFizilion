@@ -26,20 +26,19 @@ async def _(event):
     event.message.id
     CMD_WEB = {
         "sftp": "expect -c " 
-              spawn sftp $SFUSER
-              expect \"yes/no\"
-              send \"yes\r\"
-              expect \"Password\"        
-              send \"$::env(SFPASS)\r\"
-              expect \"sftp> \"
-              send \"$::env(SFDIR)\r\"
-              set timeout -1
-              send \"put \"{}\"\r\"
-              expect \"Uploading\"
-              expect \"100%\"
-              expect \"sftp>\"
-              interact" 
-              "}
+              spawn sftp $SFUSER\
+              expect \"yes/no\"\
+              send \"yes\r\"\
+              expect \"Password\"\
+              send \"$::env(SFPASS)\r\"\
+              expect \"sftp> \"\
+              send \"$::env(SFDIR)\r\"\
+              set timeout -1\
+              send \"put \"{}\"\r\"\
+              expect \"Uploading\"\
+              expect \"100%\"\
+              expect \"sftp>\"\
+              interact"\"}
     try:
         selected_one = CMD_WEB[selected_transfer].format(file_name)
     except KeyError:
