@@ -183,6 +183,10 @@ TEMP_DOWNLOAD_DIRECTORY = os.environ.get(
 # Uptobox
 USR_TOKEN = os.environ.get("USR_TOKEN_UPTOBOX", None)
 
+#SourceForge
+SFUSER = os.environ.get("SFUSER") or "null"
+SFPASS = os.environ.get("SFPASS") or "null"
+SFDIR = os.environ.get("SFDIR") or "null"
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
