@@ -44,7 +44,6 @@ pytz
 qrcode
 redis
 requests
-scribd-downloader
 search-engine-parser
 speedtest-cli
 sqlalchemy
