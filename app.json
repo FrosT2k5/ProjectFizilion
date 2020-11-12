@@ -198,6 +198,18 @@
       "description": "API for direct link uptobox, https://docs.uptobox.com/#how-to-find-my-api-token",
       "required": false
     },
+    "SFUSER": {
+      "description": "sourceforge Username",
+      "required": false
+    },
+    "SFPASS": {
+      "description": "sourceforge Password",
+      "required": false
+    },
+    "SFDIR": {
+      "description": "sourceforge full directory address",
+      "required": false
+    },
     "LOGSPAMMER": {
       "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
       "value": "False"
