@@ -2,8 +2,6 @@
 
 FILE=${1?Error: what to put}
 
-echo -e "initiating"
-
 expect -c " 
 spawn sftp $SFUSER@frs.sourceforge.net
 expect \"yes/no\"
@@ -19,4 +17,4 @@ expect \"100%\"
 expect \"sftp>\"
 interact"
 
-echo -e "done"
+rm -rf .ssh/known_hosts
