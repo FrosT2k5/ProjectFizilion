@@ -11,7 +11,7 @@ send \"yes\r\"
 expect \"Password\"        
 send \"$SFPASS\r\"
 expect \"sftp> \"
-send \"$SFDIR\r\"
+send \"cd $SFDIR\r\"
 set timeout -1
 send \"put $FILE\r\"
 expect \"Uploading\"
