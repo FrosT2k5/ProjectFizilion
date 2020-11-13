@@ -13,7 +13,7 @@ COPY ./sample_config.env ./userbot.session* ./config.env* ./sourceforge.sh /Fizi
 RUN chmod 777 /Fizilion/sourceforge.sh
 #transfer
 
-RUN cd /Fizilion/bin && curl -sL https://git.io/file-transfer | sh && chmod 700 transfer
+RUN curl -sL https://git.io/file-transfer | sh
 
 #
 # Finalization
