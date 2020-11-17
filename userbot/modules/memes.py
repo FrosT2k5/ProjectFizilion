@@ -1461,6 +1461,7 @@ CMD_HELP.update(
 \n\n.pro\
 \nUsage: For peru people.\
 \n\n.type\
+\n.retard .retard reply to a person\
 \nUsage: Just a small command to make your keyboard become a typewriter!\
 \n\n.lfy <query>\
 \nUsage: Let me Google that for you real quick !!\
@@ -1472,6 +1473,5 @@ CMD_HELP.update(
 \n\nAnd many more\
 \n.nou ; .bot ; .gey ; .gey ; .tf ; .paw ; .taco ; .nih ;\
 \n.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .earth ; .iwi\
-\n.retard ; .retard ('reply to a person')
 \n\n\nThanks to 🅱️ottom🅱️ext🅱️ot (@NotAMemeBot) for some of these."}
 )
