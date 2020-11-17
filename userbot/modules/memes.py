@@ -1461,8 +1461,8 @@ CMD_HELP.update(
 \n\n.pro\
 \nUsage: For peru people.\
 \n\n.type\
-\n.retard .retard reply to a person\
 \nUsage: Just a small command to make your keyboard become a typewriter!\
+\n\n.retard .retard reply to a person\
 \n\n.lfy <query>\
 \nUsage: Let me Google that for you real quick !!\
 \n\n.decide [Alternates: (.yes, .no, .maybe)]\
