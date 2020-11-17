@@ -1397,6 +1397,14 @@ async def nou(noway):
         await noway.edit(
           "Good Night"
      )
+@register(outgoing=True, pattern='^.retard$')
+async def retard(event):
+    replied = await event.get_reply_message()
+    if not replied:
+        await event.edit('reply to someone so i can check how retarded they are!')
+        return
+    sender = replied.sender
+    await event.edit(f'{sender.username} is {randint(0, 101)}% retarded!')
 
 CMD_HELP.update(
     {
@@ -1464,5 +1472,6 @@ CMD_HELP.update(
 \n\nAnd many more\
 \n.nou ; .bot ; .gey ; .gey ; .tf ; .paw ; .taco ; .nih ;\
 \n.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .earth ; .iwi\
+\n.retard ; .retard ('reply to a person')
 \n\n\nThanks to 🅱️ottom🅱️ext🅱️ot (@NotAMemeBot) for some of these."}
 )
