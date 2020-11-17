@@ -1397,6 +1397,14 @@ async def nou(noway):
         await noway.edit(
           "Good Night"
      )
+@register(outgoing=True, pattern='^.retard$')
+async def retard(event):
+    replied = await event.get_reply_message()
+    if not replied:
+        await event.edit('reply to someone so i can check how retarded they are!')
+        return
+    sender = replied.sender
+    await event.edit(f'{sender.username} is {randint(0, 101)}% retarded!')
 
 CMD_HELP.update(
     {
@@ -1453,6 +1461,7 @@ CMD_HELP.update(
 \n\n.pro\
 \nUsage: For peru people.\
 \n\n.type\
+\n.retard .retard reply to a person\
 \nUsage: Just a small command to make your keyboard become a typewriter!\
 \n\n.lfy <query>\
 \nUsage: Let me Google that for you real quick !!\

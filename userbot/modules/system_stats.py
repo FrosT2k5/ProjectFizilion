@@ -272,7 +272,16 @@ async def amireallyalivereset(ureset):
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
     await ureset.edit("`" "Successfully reset user for alive!" "`")
 
+@register(outgoing=True, pattern=r"^.(off|shutdown)$")
+async def shutdown(shut):
+    await shut.edit('`shutting down......`')
+    sys.exit(1)
 
+CMD_HELP.update(
+{'shutdown\n':
+"\n`Usage`: shuts down the bot"
+"\n`Usage`: .shutdown | .off"}
+)
 CMD_HELP.update(
     {
         "sysd": ".sysd\
@@ -303,3 +312,4 @@ CMD_HELP.update(
     \nUsage: Resets the user to default."
     }
 )
+
