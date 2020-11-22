@@ -24,10 +24,10 @@ from userbot.events import register
 # ========================= CONSTANTS ============================
 DEF_UNAPPROVED_MSG = (
     "Hey there :)\n"
-    "I am Fizilion, my Master's assistant.\n"
-    "Please wait for my Master to read your PMs.\n"
-    "Have patience, otherwise spamming my Master's pm will result in a block.\n\n\n"
-    "*This PM is Powered by Fizilion Ai")
+    "I am Fizilion, my Master's assistant and bot.\n"
+    "Please wait for my Master to read your messages.\n"
+    "Have patience, Wait for my Master to approve you,he doesn't approve retards tho\n\n\n"
+    "*This service is Powered by Fizilion AI")
 # =================================================================
 
 
@@ -85,9 +85,9 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > 4:
                 await event.respond(
-                    "`You were spamming my PM, which I didn't like.`\n"
-                    "`I Wouldn't let you to chat me again until further notice`\n"
-                    "`Bye`"
+                    "`You were spamming my Master's PM, which I didn't like.`\n"
+                    "`I won't let you message me again until my master changes his mind, Brrrrrrr`\n"
+                    "`Good Bye`"
                 )
 
                 try:
