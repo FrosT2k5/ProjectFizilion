@@ -143,7 +143,7 @@ async def run(run_q):
         )
 
 
-@register(outgoing=True, pattern=r"^\.shell(?: |$|\n)(.*)")
+@register(outgoing=True, pattern="^.term(?: |$)(.*)")
 async def terminal_runner(term):
     """ For .shell command, runs bash commands and scripts on your server. """
     curruser = USER_TERM_ALIAS
@@ -159,8 +159,9 @@ async def terminal_runner(term):
         return await term.edit("`Term commands aren't permitted on channels!`")
 
     if not command:
-        return await term.edit(
-            "``` Give a command or use .help shell for an example.```"
+        await term.edit(
+            "``` Give a command or use .help term for \
+            an example.```"
         )
 
     for i in ("userbot.session", "env"):
@@ -198,11 +199,8 @@ async def terminal_runner(term):
             BOTLOG_CHATID, "Terminal command " + command + " was executed sucessfully.",
         )
 
-
-CMD_HELP.update({"eval": ">`.eval 2 + 3`"
-                 "\nUsage: Evalute mini-expressions.",
-                 "exec": ">`.exec print('hello')`"
-                 "\nUsage: Execute small python scripts.",
-                 "shell": ">`.shell <cmd>`"
-                 "\nUsage: Run bash commands and scripts on your server.",
-                 })
+CMD_HELP.update({"eval": ".eval 2 + 3\nUsage: Evalute mini-expressions."})
+CMD_HELP.update({"exec": ".exec print('hello')\nUsage: Execute small python scripts."})
+CMD_HELP.update(
+    {"term": ".term ls\nUsage: Run bash commands and scripts on your server."}
+)
