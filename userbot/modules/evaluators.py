@@ -158,12 +158,6 @@ async def terminal_runner(term):
     if term.is_channel and not term.is_group:
         return await term.edit("`Term commands aren't permitted on channels!`")
 
-    if not command:
-        await term.edit(
-            "``` Give a command or use .help term for \
-            an example.```"
-        )
-
     for i in ("userbot.session", "env"):
         if command.find(i) != -1:
             return await term.edit("`That's a dangerous operation! Not Permitted!`")
