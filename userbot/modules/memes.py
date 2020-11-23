@@ -1223,7 +1223,19 @@ async def lol(lel):
             "`\n╱┗━━━┛╰━━━╯┗━━━┛╱ `"
         )
 
-
+@register(outgoing=True, pattern="^.lmao$")
+async def lmao(lmfao):
+    if not lmfao.text[0].isalpha() and lmfao.text[0] not in ("/", "#", "@", "!"):
+        await lmfao.edit(
+            "`\n▗▖   ▗▄ ▄▖  ▄   ▗▄▖ `"
+            "`\n▐▌   ▐█ █▌ ▐█▌  █▀█ `"
+            "`\n▐▌   ▐███▌ ▐█▌ ▐▌ ▐▌`"
+            "`\n▐▌   ▐▌█▐▌ █ █ ▐▌ ▐▌`"            
+            "`\n▐▌   ▐▌▀▐▌ ███ ▐▌ ▐▌`"
+            "`\n▐▙▄▄▖▐▌ ▐▌▗█ █▖ █▄█ `"
+            "`\n▝▀▀▀▘▝▘ ▝▘▝▘ ▝▘ ▝▀▘ `"
+        )
+        
 @register(outgoing=True, pattern="^.lool$")
 async def lool(lul):
     if not lul.text[0].isalpha() and lul.text[0] not in ("/", "#", "@", "!"):
@@ -1472,6 +1484,6 @@ CMD_HELP.update(
 \nUsage: Create fake chat actions, for fun. (Default action: typing)\
 \n\nAnd many more\
 \n.nou ; .bot ; .gey ; .gey ; .tf ; .paw ; .taco ; .nih ;\
-\n.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .earth ; .iwi\
+\n.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .earth ; .lmao ; .iwi\
 \n\n\nThanks to 🅱️ottom🅱️ext🅱️ot (@NotAMemeBot) for some of these."}
 )
