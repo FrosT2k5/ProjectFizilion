@@ -1010,7 +1010,7 @@ async def Oof(woof):
 async def brr(brbr):
     t = "Brr"
     for j in range(15):
-        t = t[:-1] + "rr"
+        t = t + "rr"
         await brbr.edit(t)
 
 @register(outgoing=True, pattern="^.moon$")
