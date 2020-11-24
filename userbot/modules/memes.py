@@ -1006,6 +1006,12 @@ async def Oof(woof):
         t = t[:-1] + "of"
         await woof.edit(t)
 
+@register(outgoing=True, pattern="^(.brr|Brr)$")
+async def brr(brbr):
+    t = "Brr"
+    for j in range(15):
+        t = t[:-1] + "rr"
+        await brbr.edit(t)
 
 @register(outgoing=True, pattern="^.moon$")
 async def moon(moone):
@@ -1480,6 +1486,6 @@ CMD_HELP.update(
 \nUsage: Create fake chat actions, for fun. (Default action: typing)\
 \n\nAnd many more\
 \n.nou ; .bot ; .gey ; .gey ; .tf ; .paw ; .taco ; .nih ;\
-\n.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .earth ; .lmao ; .iwi\
+\n.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .earth ; ; .Brr/Brr ; .lmao ; .iwi\
 \n\n\nThanks to 🅱️ottom🅱️ext🅱️ot (@NotAMemeBot) for some of these."}
 )
