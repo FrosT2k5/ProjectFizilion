@@ -1438,6 +1438,8 @@ CMD_HELP.update(
 \nUsage: Stretch it.\
 \n\n.zal\
 \nUsage: Invoke the feeling of chaos.\
+\n\nBrr/.brr\
+\nUsage: Userbot goes Brrrrrrrrrrr\
 \n\nOof\
 \nUsage: Ooooof\
 \n\n.moon\
@@ -1486,6 +1488,6 @@ CMD_HELP.update(
 \nUsage: Create fake chat actions, for fun. (Default action: typing)\
 \n\nAnd many more\
 \n.nou ; .bot ; .gey ; .gey ; .tf ; .paw ; .taco ; .nih ;\
-\n.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .earth ; ; .brr/Brr ; .lmao ; .iwi\
+\n.fag ; .gtfo ; .stfu ; .lol ; .lool ; .fail ; .earth ; .lmao ; .iwi\
 \n\n\nThanks to 🅱️ottom🅱️ext🅱️ot (@NotAMemeBot) for some of these."}
 )
