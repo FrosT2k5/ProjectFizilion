@@ -33,7 +33,7 @@
 Easy way to get STRING_SESSION. 
 
 ### Run on repl.it
-[![Run repl.it](https://img.shields.io/badge/run-string__session.py-blue?style=flat-square&logo=repl.it)](https://session.uraniumcore.repl.co)
+[![Run repl.it](https://img.shields.io/badge/run-string__session.py-blue?style=flat-square&logo=repl.it)](https://session.uraniumcore.repl.run)
 
 ### or Run on your terminal
 ```
