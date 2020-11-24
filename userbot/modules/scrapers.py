@@ -39,7 +39,7 @@ from userbot.utils import chrome, googleimagesdownload, progress
 CARBONLANG = "auto"
 TTS_LANG = "en"
 TRT_LANG = "en"
-TEMP_DOWNLOAD_DIRECTORY = "/root/userbot/.bin"
+TEMP_DOWNLOAD_DIRECTORY = "/Fizilion/.bin"
 
 
 @register(outgoing=True, pattern=r"^\.crblang (.*)")
