@@ -39,7 +39,7 @@ from userbot.utils import chrome, googleimagesdownload, progress
 CARBONLANG = "auto"
 TTS_LANG = "en"
 TRT_LANG = "en"
-TEMP_DOWNLOAD_DIRECTORY = "/Fizilion/.bin"
+TEMP_DOWNLOAD_DIRECTORY = "/Fizilion/.bin/"
 
 
 @register(outgoing=True, pattern=r"^\.crblang (.*)")
@@ -70,14 +70,13 @@ async def carbon_api(e):
     driver = await chrome()
     driver.get(url)
     await e.edit("`Processing..\n50%`")
-    download_path = "./"
     driver.command_executor._commands["send_command"] = (
         "POST",
         "/session/$sessionId/chromium/send_command",
     )
     params = {
         "cmd": "Page.setDownloadBehavior",
-        "params": {"behavior": "allow", "downloadPath": download_path},
+        "params": {"behavior": "allow", "downloadPath": TEMP_DOWNLOAD_DIRECTORY },
     }
     driver.execute("send_command", params)
     driver.find_element_by_xpath("//button[@id='export-menu']").click()
