@@ -755,7 +755,7 @@ async def decide(event):
             r = requests.get(f"https://yesno.wtf/api").json()
         return r
     def decision2():
-        rint = random.radiant(1,8)
+        rint = random.randint(1,8)
         d = ["yes","no","maybe"]
         dr = random.choice(d)
         if decision != "decide":
