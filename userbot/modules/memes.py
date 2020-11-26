@@ -11,6 +11,7 @@ from collections import deque
 from random import choice, getrandbits, randint
 from re import sub
 
+import random
 import requests
 from cowpy import cow
 
@@ -747,15 +748,28 @@ async def emo(sigh):
 async def decide(event):
     decision = event.pattern_match.group(1).lower()
     message_id = event.reply_to_msg_id if event.reply_to_msg_id else None
-    if decision != "decide":
-        r = requests.get(f"https://yesno.wtf/api?force={decision}").json()
-    else:
-        r = requests.get(f"https://yesno.wtf/api").json()
+    def decision1():    
+        if decision != "decide":
+            r = requests.get(f"https://yesno.wtf/api?force={decision}").json()
+        else:
+            r = requests.get(f"https://yesno.wtf/api").json()
+        return r
+    def decision2():
+        rint = random.radiant(1,8)
+        d = ["yes","no","maybe"]
+        dr = random.choice(d)
+        if decision != "decide":
+            r = requests.get(f"https://raw.githubusercontent.com/SuperCosmicBeing/yesnorepo/{decision}/gif{rint}.json").json()
+        else:
+            r = requests.get(f"https://raw.githubusercontent.com/SuperCosmicBeing/yesnorepo/{dr}/gif{rint}.json").json()
+        return r
+    declist = [decision1,decision2]
+    fd = random.choice(declist)()
     await event.delete()
     await event.client.send_message(
-        event.chat_id, str(r["answer"]).upper(), reply_to=message_id, file=r["image"]
-    )
-
+        event.chat_id, str(fd["answer"]).upper(), reply_to=message_id, file=fd["image"]
+        )
+        
 
 @register(outgoing=True, pattern="^;_;$", ignore_unsafe=True)
 async def fun(idk):
