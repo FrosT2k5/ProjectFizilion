@@ -301,6 +301,10 @@ async def ipinfo(event):
             f"•`Time Zone      : {info['timezone']}`\n\n"
             "`This info might not be 100% Accurate`"
        )
+    elif "bogon" in info:
+        await event.edit(
+            f"Some IP addresses and IP ranges are reserved for special use, such as for local or private networks, and should not appear on the  public internet. These reserved ranges, along with other IP ranges that haven’t yet been allocated and therefore also shouldn’t appear on the public internet are sometimes known as bogons. So your ip: {info[ip]} is a bogon ip"
+        )
     else:
         await event.edit("Invalid Information Provided")
         
