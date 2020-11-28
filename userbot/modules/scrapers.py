@@ -303,7 +303,7 @@ async def ipinfo(event):
        )
     elif "bogon" in info:
         await event.edit(
-            f"Some IP addresses and IP ranges are reserved for special use, such as for local or private networks, and should not appear on the  public internet. These reserved ranges, along with other IP ranges that haven’t yet been allocated and therefore also shouldn’t appear on the public internet are sometimes known as bogons. So your ip: {0} is a bogon ip".format(info["ip"])
+            f"`Some IP addresses and IP ranges are reserved for special use, such as for local or private networks, and should not appear on the  public internet. These reserved ranges, along with other IP ranges that haven’t yet been allocated and therefore also shouldn’t appear on the public internet are sometimes known as bogons\n So your ip: {0} is a bogon ip`".format(info["info[ip]"])
         )
     else:
         await event.edit("Invalid Information Provided")
