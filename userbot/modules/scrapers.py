@@ -48,7 +48,6 @@ async def setlang(prog):
     CARBONLANG = prog.pattern_match.group(1)
     await prog.edit(f"Language for carbon.now.sh set to {CARBONLANG}")
 
-
 @register(outgoing=True, pattern=r"^\.carbon")
 async def carbon_api(e):
     """ A Wrapper for carbon.now.sh """
@@ -277,7 +276,34 @@ async def wiki(wiki_q):
             BOTLOG_CHATID, f"Wiki query `{match}` was executed successfully"
         )
 
-
+@register(outgoing=True, pattern=r"^\.ipinfo(?: |$)(.*)")
+async def ipinfo(event):
+    #Thanks to https://ipinfo.io for this api
+    ip = event.pattern_match.group(1)
+    os.system("curl ipinfo.io/{0} --silent > /Fizilion/ip.txt".format(ip))
+    rinfo = open("/Fizilion/ip.txt","r")
+    info = json.load(rinfo)
+    rinfo.close()
+    os.system("rm /Fizilion/ip.txt")
+    
+    if "error" in info:
+        await event.edit("Invalid IP address")        
+    elif "ip" in info:
+        await event.edit(
+            "`IP CREDENTIALS FOUND!`\n\n"
+            f"•`IP Address     : {info['ip']}`\n"
+            f"•`City           : {info['city']}`\n"
+            f"•`State          : {info['region']}`\n"
+            f"•`Country        : {info['country']}`\n"
+            f"•`Lat/Long       : {info['loc']}`\n"
+            f"•`Organisation   : {info['org']}`\n"
+            f"•`Pin code       : {info['postal']}`\n"
+            f"•`Time Zone      : {info['timezone']}`\n\n"
+            "`This info might not be 100% Accurate`"
+       )
+    else:
+        await event.edit("Invalid Information Provided")
+        
 @register(outgoing=True, pattern=r"^\.ud(?: |$)(.*)")
 async def urban_dict(event):
     """Output the definition of a word from Urban Dictionary"""
@@ -714,6 +740,8 @@ CMD_HELP.update(
         "\nCan specify the number of results needed (default is 3).",
         "currency": ">`.currency <amount> <from> <to>`"
         "\nUsage: Converts various currencies for you.",
+        "ipinfo": ">`.ipinfo <ip_address>`"
+        "\nUsage: Gets the info of given ipaddress, send .ipinfo for bot's server ip info",
         "carbon": ">`.carbon <text> [or reply]`"
         "\nUsage: Beautify your code using carbon.now.sh\n"
         "Use .crblang <text> to set language for your code.",
