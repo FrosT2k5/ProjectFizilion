@@ -288,7 +288,7 @@ async def ipinfo(event):
     
     if "error" in info:
         await event.edit("Invalid IP address")        
-    elif "ip" in info:
+    elif "country" in info:
         await event.edit(
             "`IP CREDENTIALS FOUND!`\n\n"
             f"•`IP Address     : {info['ip']}`\n"
@@ -303,7 +303,7 @@ async def ipinfo(event):
        )
     elif "bogon" in info:
         await event.edit(
-            f"Some IP addresses and IP ranges are reserved for special use, such as for local or private networks, and should not appear on the  public internet. These reserved ranges, along with other IP ranges that haven’t yet been allocated and therefore also shouldn’t appear on the public internet are sometimes known as bogons. So your ip: {info[ip]} is a bogon ip"
+            f"Some IP addresses and IP ranges are reserved for special use, such as for local or private networks, and should not appear on the  public internet. These reserved ranges, along with other IP ranges that haven’t yet been allocated and therefore also shouldn’t appear on the public internet are sometimes known as bogons. So your ip: {0} is a bogon ip".format(info["ip"])
         )
     else:
         await event.edit("Invalid Information Provided")
