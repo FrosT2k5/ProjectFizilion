@@ -775,7 +775,9 @@ async def bruh(tard):
     bruhdir = "/Fizilion/resources/bruh.mp3"
     message_id = tard.reply_to_msg_id if tard.reply_to_msg_id else None
     await bruh.client.send_file(
-        bruh.chat_id, reply_to=message_id, bruhdir
+        bruh.chat_id, 
+        bruhdir,
+        reply_to=message_id
     )
         
 @register(outgoing=True, pattern="^;_;$", ignore_unsafe=True)
