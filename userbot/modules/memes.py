@@ -770,7 +770,12 @@ async def decide(event):
         event.chat_id, str(fd["answer"]).upper(), reply_to=message_id, file=fd["image"]
         )
         
-
+@register(outgoing=True, pattern="^.bruh$")
+async def bruh(tard):
+    message_id = tard.reply_to_msg_id if tard.reply_to_msg_id else None
+    await event.client.send_message(
+        tard.chat_id, reply_to=message_id, file="https://raw.githubusercontent.com/FrosT2k5/ProjectFizilion/dragon/resources/bruh.mp3"
+        )
 @register(outgoing=True, pattern="^;_;$", ignore_unsafe=True)
 async def fun(idk):
     t = ";_;"
