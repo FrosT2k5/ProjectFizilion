@@ -772,10 +772,12 @@ async def decide(event):
         
 @register(outgoing=True, pattern="^.bruh$")
 async def bruh(tard):
+    bruhdir = "/Fizilion/resources/bruh.mp3"
     message_id = tard.reply_to_msg_id if tard.reply_to_msg_id else None
-    await event.client.send_message(
-        tard.chat_id, reply_to=message_id, file="https://raw.githubusercontent.com/FrosT2k5/ProjectFizilion/dragon/resources/bruh.mp3"
-        )
+    await bruh.client.send_file(
+        bruh.chat_id, reply_to=message_id, bruhdir
+    )
+        
 @register(outgoing=True, pattern="^;_;$", ignore_unsafe=True)
 async def fun(idk):
     t = ";_;"
@@ -1489,6 +1491,8 @@ CMD_HELP.update(
 \nUsage: Believe me, you will find this useful.\
 \n\n.pro\
 \nUsage: For peru people.\
+\n\n.bruh\
+\nUsage: Bruh Sound Effect.\
 \n\n.type\
 \nUsage: Just a small command to make your keyboard become a typewriter!\
 \n\n.retard .retard reply to a person\
