@@ -774,8 +774,8 @@ async def decide(event):
 async def bruh(tard):
     bruhdir = "/Fizilion/resources/bruh.mp3"
     message_id = tard.reply_to_msg_id if tard.reply_to_msg_id else None
-    await bruh.client.send_file(
-        bruh.chat_id, 
+    await tard.client.send_file(
+        tard.chat_id, 
         bruhdir,
         reply_to=message_id
     )
