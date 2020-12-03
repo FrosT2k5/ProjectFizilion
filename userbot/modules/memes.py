@@ -737,14 +737,14 @@ async def slap(replied_user, event):
 
 @register(outgoing=True, pattern="^-_-$", ignore_unsafe=True)
 async def emo(sigh):
-    i=0
-    c="-_-"
-    while i<=15:
-        if i%4==0:
-            c="-_-"
-        await sigh.edit(c)
-        c=c[:-1]+"_-"
-        i+=1
+    il=0
+    okay="-_-"
+    while il<=15:
+        if il%4==0:
+            okay="-_-"
+        await sigh.edit(okay)
+        okay=okay[:-1]+"_-"
+        il+=1
 
 @register(outgoing=True, pattern="^.(yes|no|maybe|decide)$")
 async def decide(event):
@@ -785,14 +785,14 @@ async def bruh(tard):
         
 @register(outgoing=True, pattern="^;_;$", ignore_unsafe=True)
 async def fun(idk):
-    i=0
-    c=";_;"
-    while i<=15:
-        if i%4==0:
-            c=";_;"
-        await idk.edit(c)
-        c=c[:-1]+"_;"
-        i+=1
+    ij=0
+    cri=";_;"
+    while ij<=15:
+        if ij%4==0:
+            cri=";_;"
+        await idk.edit(cri)
+        cri=cri[:-1]+"_;"
+        ij+=1
 
 @register(outgoing=True, pattern="^.fp$")
 async def facepalm(palm):
