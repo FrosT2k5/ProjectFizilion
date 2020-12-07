@@ -165,7 +165,7 @@ async def moni(event):
             request_url = "https://api.exchangeratesapi.io/latest?base={}".format(
                 currency_from)
             current_response = get(request_url).json()
-            if currency_to in current_response["rates"]:
+            if currency_to in current_response:
                 current_rate = float(current_response["rates"][currency_to])
                 rebmun = round(number * current_rate, 2)
                 await event.edit(
