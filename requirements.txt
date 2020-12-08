@@ -41,7 +41,7 @@ pylast
 pySmartDL
 python-barcode
 python-dotenv
-git+https://gitlab.com/royalturd/yt-dl.git
+youtube-dl
 pytz
 qrcode
 redis
