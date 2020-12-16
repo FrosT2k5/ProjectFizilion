@@ -19,6 +19,6 @@ RUN curl -sL https://git.io/file-transfer | sh
 # install required pypi modules
 RUN pip3 install -r requirements.txt
 
-
+RUN apk add expect
 # Finalization
 CMD ["python3","-m","userbot"]
