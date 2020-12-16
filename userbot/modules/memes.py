@@ -1035,6 +1035,13 @@ async def Oof(woof):
         t = t[:-1] + "of"
         await woof.edit(t)
 
+@register(outgoing=True, pattern="^(.eww|Eww)$")
+async def eww(bad):
+    t = "Eww"
+    for j in range(7):
+        t = t[:-1] + "ww"
+        await bad.edit(t)
+
 @register(outgoing=True, pattern="^(.brr|Brr)$")
 async def brr(brbr):
     t = "Brr"
@@ -1465,6 +1472,8 @@ CMD_HELP.update(
 \nUsage: Userbot goes Brrrrrrrrrrr\
 \n\nOof\
 \nUsage: Ooooof\
+\n\nEww/.eww\
+\nUsage: Ewwwwwwww\
 \n\n.moon\
 \nUsage: kensar moon animation.\
 \n\n.clock\
