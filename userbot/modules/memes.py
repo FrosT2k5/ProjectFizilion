@@ -1031,7 +1031,7 @@ async def pressf(f):
 @register(outgoing=True, pattern="^Oof$")
 async def Oof(woof):
     t = "Oof"
-    for j in range(15):
+    for j in range(10):
         t = t[:-1] + "of"
         await woof.edit(t)
 
@@ -1045,7 +1045,7 @@ async def eww(bad):
 @register(outgoing=True, pattern="^(.brr|Brr)$")
 async def brr(brbr):
     t = "Brr"
-    for j in range(15):
+    for j in range(10):
         t = t + "rr"
         await brbr.edit(t)
 
