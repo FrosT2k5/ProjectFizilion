@@ -1417,10 +1417,21 @@ async def nou(noway):
 @register(outgoing=True, pattern="^.gm$")
 async def nou(noway):
     if not noway.text[0].isalpha() and noway.text[0] not in ("/", "#", "@", "!"):
-        await noway.edit(
-          "Good Morning"
-     )
-
+        quos = [
+        "Wishing you a day full of sunny smiles and happy thoughts\n\n~~Good Morning!",
+        "Every Morning we are born again, what we do today is what matters the most\n\n~~Good Morning!",
+        "A new day\nA new Blessing\nA new hope\n\n~~Good Morning!",
+        "Sometimes the best thing you can do is \nNot think, Not stress\nNot wonder, Not obsess\nJust breathe and have faith,\nEverything will work out...\nJust Live\n\n~~Good Morning!",
+        "Get up everyday with a positive mission...\n Because you deserve to live an Amazing life! \n\n~~Good Morning!",
+        "Never think\n I have nothing... \n\n Never think\n I have everything...\n\n But always think\n I have something\n and I can achieve everything!\n\n~~Good Morning!",
+        "Road has speed limit,\nbank has money limit,\nExams have time limit,\n BUT\nYour thinking has no limit,\nSo think big, \n and Achieve Big,\n\n~~Good Morning!",
+        "God didn't create us to be sad,\nHe created us to have joy\n\n~~Good Morning!",
+        "You are a rare gem,an exclusive, a limitd edition.\n There is only one of you! Have an amazing day!\n\n~~Good Morning!",
+        "Stay Hopeful\nYou never know\nWhat this day can bring.\n\n~~Good Morning!",
+        "Between\nYesterday's mistake &\nTomorrow's Hope,\nthere is a \nfantastic opportunity called\n**Today**,\nLive it! Love it!\nThis day is yours!\n\n~~Good Morning!",
+        "Living is very simple,\nLoving is also simple\nLaughing is too simple,\nWinning is also simple,\nThen what is difficult?\nBeing simple is very difficult\n\nGood Morning!"
+        ]
+        await noway.edit(random.choice(quos))
 @register(outgoing=True, pattern="^.ga$")
 async def nou(noway):
     if not noway.text[0].isalpha() and noway.text[0] not in ("/", "#", "@", "!"):
