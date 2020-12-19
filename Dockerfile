@@ -1,5 +1,5 @@
 # inherit prebuilt image
-FROM frost2k5/projectfizilion:latest
+FROM docker.pkg.github.com/frost2k5/fizilion-docker/image:latest
 
 # env setup
 RUN mkdir /Fizilion && chmod 777 /Fizilion
