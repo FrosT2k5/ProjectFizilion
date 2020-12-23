@@ -29,9 +29,6 @@ async def evaluate(query):
         if expression.find(i) != -1:
             return await query.edit("`That's a dangerous operation! Not Permitted!`")
 
-    if not re.search(r"echo[ \-\w]*\$\w+", expression) is None:
-        return await expression.edit("`That's a dangerous operation! Not Permitted!`")
-
     try:
         evaluation = str(eval(expression))
         if evaluation:
@@ -88,9 +85,6 @@ async def run(run_q):
     for i in ("userbot.session", "env"):
         if code.find(i) != -1:
             return await run_q.edit("`That's a dangerous operation! Not Permitted!`")
-
-    if not re.search(r"echo[ \-\w]*\$\w+", run_q) is None:
-        return await run_q.edit("`That's a dangerous operation! Not Permitted!`")
 
     if len(code.splitlines()) <= 5:
         codepre = code
