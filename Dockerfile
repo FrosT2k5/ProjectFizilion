@@ -1,5 +1,5 @@
 # inherit prebuilt image
-FROM frost2k5/projectfizilion:latest
+FROM elytra8/projectfizilion:latest
 
 # env setup
 RUN mkdir /Fizilion && chmod 777 /Fizilion
@@ -7,7 +7,7 @@ ENV PATH="/Fizilion/bin:$PATH"
 WORKDIR /Fizilion
 
 # clone repo
-RUN git clone https://github.com/FrosT2k5/ProjectFizilion -b dragon /Fizilion
+RUN git clone https://github.com/ElytrA8/ProjectFizilion -b dragon /Fizilion
 
 
 # Copies session and config(if it exists)
