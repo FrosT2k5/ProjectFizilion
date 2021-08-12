@@ -1,6 +1,6 @@
 # Hello.
 ## Myself ElytrA8.
-Have a look at my [Repo](https://github.com/ElytrA8/ProjectFizilion) to deploy Fizilion USERBOT. 
+Have a look at my [Repo](https://github.com/PrajjuS/ProjectFizilion) to deploy Fizilion USERBOT. 
 To use user bot we should have an idea about vars.
 ## envoirnment VARS.
 
@@ -277,6 +277,4 @@ Config values
 
 Want to contact Owner/lead dev click [here](https://telegram.dog/ElytrA8)
 
-Want to join support group click [here](https://telegram.dog/PROJECT_TESLA)
-
-ot group join [here](https://telegram.dog/ElytrA8CT)
+Want to join support group click [here](https://t.me/ProjectFizilionChat) 
