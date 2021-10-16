@@ -84,7 +84,7 @@ if BOTLOG:
     LOGSPAMMER = sb(os.environ.get("LOGSPAMMER") or "False")
 else:
     LOGSPAMMER = False
-    
+
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN") or "False")
 
@@ -100,7 +100,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN") or None
 # Custom (forked) repo URL and BRANCH for updater.
 UPSTREAM_REPO_URL = (os.environ.get("UPSTREAM_REPO_URL")
                      or "https://github.com/FrosT2k5/ProjectFizilion.git")
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH") or "demon"
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH") or "ghoul"
 ###
 FUPSTREAM_REPO_URL = (os.environ.get("FPSTREAM_REPO_URL")
                      or "https://github.com/Elytra8/ProjectFizilion.git")
@@ -157,7 +157,7 @@ TZ_NUMBER = os.environ.get("TZ_NUMBER") or 1
 USERBOT_VERSION = "4.0"
 
 # User Terminal alias
-USER_TERM_ALIAS = os.environ.get("USER_TERM_ALIAS") or "dem0n"
+USER_TERM_ALIAS = os.environ.get("USER_TERM_ALIAS") or "gh0ul"
 
 # Updater alias
 UPDATER_ALIAS = os.environ.get("UPDATER_ALIAS") or "Fizilion"
@@ -254,7 +254,7 @@ with bot:
             "valid entity. Check your environment variables/config.env file."
         )
         quit(1)
-        
+
 async def get_readable_time(seconds: int) -> str:
     count = 0
     up_time = ""
