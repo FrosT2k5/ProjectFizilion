@@ -2,7 +2,7 @@
 ## Myself ElytrA8.
 Have a look at my [Repo](https://github.com/ElytrA8/ProjectFizilion) to deploy Fizilion USERBOT. 
 To use user bot we should have an idea about vars.
-## envoirnment VARS.
+## Envoirnment VARS.
 
 **API_KEY**: you can get this value from the link given below [here](https://telegram.dog/UseTGXBot).
 
@@ -95,8 +95,8 @@ Now fill the required values
 
 And Done your userbot should be alive now
 
-## Gdrive
-[Click here](https://da.gd/so63O)
+## <details> <summary><h2>Gdrive</h2></summary>
+ [Click here](https://da.gd/so63O)
 
 Login to your gmail.com account. It is recommended to use a gmail.com for creating the API.
 
@@ -177,9 +177,11 @@ Open and copy code
 And set it in G_DRIVE_AUTH_TOKEN_DATA IN HEROKU VAR
 
 Gdrive is now ready to use.
+ </details>
 
-## Youtube
-Go [here](https://console.developers.google.com/apis/dashboard)
+
+<details> <summary> <h2>Youtube</h2> </summary>
+ Go [here](https://console.developers.google.com/apis/dashboard)
 
 Open menu
 
@@ -226,9 +228,10 @@ There should be one api key
 Open it and copy 
 
 Now paste it to heroku vars with YOUTUBE_API_KEY
+ </details>
 
-## TRANSFER
-Can be Used with terminal command 
+<details><summary><h2> TRANSFER </h2></summary>
+ Can be Used with terminal command 
 For Example :-
 ```
 .term ./transfer <config> <file location>
@@ -271,6 +274,7 @@ Config values
 |  lzs  |  Lanzous  |  https://www.lanzous.com/ |
 
 
+ </details>
 
 
 ## Extras
